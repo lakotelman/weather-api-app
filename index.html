@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./input.css" rel="stylesheet" />
+    <title>Weather</title>
+  </head>
+  <body class="font-mono bg-gradient-to-r from-cyan-500 to-blue-500">
+    <nav>
+      <!--Hero Image and Header-->
+      <div id="hero" class="relative">
+        <div id="error"></div>
+        <div id="image-header" class="absolute">
+          <img
+            class="w-full object-cover rounded-b-lg"
+            src="./static/imgs/2-23640_night-clouds-png-clip-transparent-library-night-clouds.png"
+          />
+        </div>
+        <div>
+          <h1 class="text-4xl text-center pt-16 pb-8 m-0 relative z-10">
+            What's the weather?
+          </h1>
+        </div>
+      </div>
+      <!--Search Bar-->
+      <div class="relative z-10 flex justify-center p-4">
+        <form id="search" class="flex gap-2" method="get" action="">
+          <div
+            class="relative border-2 border-gray-600 rounded-lg px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-blue-600 focus-within:border-blue-600"
+          >
+            <label
+              for="name"
+              class="absolute -top-5 left-2 -mt-px inline-block px-1 text-s text-black"
+              >City</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="block w-full border-0 p-0 text-gray-900 placeholder-black focus:ring-0 sm:text-sm bg-transparent"
+              placeholder="Where's your weather?"
+            />
+          </div>
+          <div class="">
+            <button
+              type="submit"
+              class="inline-flex items-center px-4 py-2 border-2 border-blue-500 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <main class="flex justify-center relative z-10">
+      <div
+        id="appbox"
+        class="mx-auto bg-blue-300 w-96 h-[650px] shadow-lg rounded-3xl p-6 mb-4 space-y-8 items-center flex flex-col justify-center border-2 border-blue-500"
+      >
+        <div
+          id="locaton-temp-forecast"
+          class="flex flex-col gap-4 justfify-center items-center"
+        >
+          <p class="text-center text-2xl" id="location">Your City</p>
+          <div
+            class="font-bold text-gray-700 bg-white flex items-center justify-center font-mono rounded-full h-32 w-32"
+          >
+            <p class="text-6xl font-sans" id="temp">(:</p>
+          </div>
+          <div class="w-[100px] h-[100px]" id="icon">
+            <img src="http://openweathermap.org/img/wn/04n@2x.png" />
+          </div>
+          <div id="forecast">Forecast</div>
+        </div>
+        <div class="flex space-x-3" id="hi-lo-humid">
+          <div
+            class="text-white flex flex-col items-center justify-center bg-slate-600 w-24 h-24 rounded-xl"
+          >
+            <p>High</p>
+            <hr />
+            <p>-</p>
+          </div>
+          <div
+            class="text-white flex flex-col items-center justify-center bg-slate-700 w-24 h-24 rounded-xl"
+          >
+            <p>Low</p>
+            <hr />
+            <p>-</p>
+          </div>
+          <div
+            class="text-white flex flex-col items-center justify-center bg-slate-800 w-24 h-24 rounded-xl"
+          >
+            <p>Humidity</p>
+            <hr />
+            <p>-</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
