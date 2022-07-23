@@ -85,14 +85,14 @@ function displayWeatherData(data) {
   >
     <p>High</p>
     <hr />
-    <p>${Math.floor(temperatureConverter(data.main.temp_min))}\u00B0</p>
+    <p>${Math.floor(temperatureConverter(data.main.temp_max))}\u00B0</p>
   </div>
   <div
     class="text-white flex flex-col items-center justify-center bg-slate-700 w-24 h-24 rounded-xl"
   >
     <p>Low</p>
     <hr />
-    <p>${Math.floor(temperatureConverter(data.main.temp_max))}\u00B0</p>
+    <p>${Math.floor(temperatureConverter(data.main.temp_min))}\u00B0</p>
   </div>
   <div
     class="text-white flex flex-col items-center justify-center bg-slate-800 w-24 h-24 rounded-xl"
